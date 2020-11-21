@@ -35,6 +35,7 @@ $(document).ready(function () {
         let github = $("<a>");
 
         card.attr("class", "card");
+        card.attr("style", "width: 18rem")
         body.attr("class", "card-body");
         cTitle.attr("class", "card-title");
         cTitle.text("Contact Information");
@@ -51,7 +52,7 @@ $(document).ready(function () {
 
         body.append(cTitle);
         body.append(cSubTitle);
-        body.append(cTitle);
+        body.append(cText);
         body.append(linkedIn);
         body.append(github);
         card.append(body);
