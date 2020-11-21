@@ -1,0 +1,69 @@
+$(document).ready(function () {
+
+    let mainGenerator = function () {
+        let row = $("<div>");
+        let col = $("<div>");
+        let title = $("<h1>");
+        let hrBreak = $("<hr />");
+        let img = $("<img>");
+        let text = $("<p>");
+
+        col.attr("class", "col-md-8");
+        title.text("About Me");
+        img.attr("src", "./assets/images/Portrait.jpg");
+        img.attr("width", "200");
+        img.attr("alt", "James Totah");
+        img.attr("class", "wrap-text");
+        text.text(
+            "Hello! My name is James Totah and I am 22 years old. I have been a Computer Science Major at the University of San Francisco for 3 years now, and have opted to partake in a UC Berkeley Web Development bootcamp to polish off my web dev skills.I am well versed in Python, Java, and C, with some experience in functional languages like Haskell and Racket.I have lived in San Francisco my whole life, and have always been a fan of tinkering with technology.I suppose it only makes sense since the bay area is currently the tech capital of the world. I hope to finish my CS degree as soon as remote learning is no longer necessary, and move on to bigger and better things!"
+        )
+
+        col.append(title);
+        col.append(hrBreak);
+        col.append(img);
+        col.append(text);
+        row.append(col);
+        $("#main").append(row);
+    }
+    let asideGenerator = function () {
+        let card = $("<div>");
+        let body = $("<div>");
+        let cTitle = $("<h5>");
+        let cSubTitle = $("<h6>");
+        let cText = $("<p>");
+        let linkedIn = $("<a>");
+        let github = $("<a>");
+
+        card.attr("class", "card");
+        body.attr("class", "card-body");
+        cTitle.attr("class", "card-title");
+        cTitle.text("Contact Information");
+        cSubTitle.attr("card-subtitle mb-2 text-muted");
+        cSubTitle.text("+ more about me");
+        cText.attr("class", "card-text");
+        cText.text("James Totah");
+        linkedIn.attr("class", "card-link");
+        linkedIn.attr("href", "https://www.linkedin.com/in/james-totah-337714188/");
+        linkedIn.text("LinkedIn Profile");
+        github.attr("class", "card-link");
+        github.attr("href", "https://github.com/jtwob");
+        github.text("GitHub Profile");
+
+        body.append(cTitle);
+        body.append(cSubTitle);
+        body.append(cTitle);
+        body.append(linkedIn);
+        body.append(github);
+        card.append(body);
+        $("#main").append(card)
+    }
+
+    let main = function () {
+        mainGenerator();
+        asideGenerator();
+    }
+
+    main();
+})
+
+
