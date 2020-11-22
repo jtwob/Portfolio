@@ -2,6 +2,9 @@ $(document).ready(function () {
 
     $("#index").attr("style", "background-color: white; margin-top: 25px; padding: 5px;");
 
+    /**
+     * mainGenerator generates the elements on the homepage and fills them
+     */
     let mainGenerator = function () {
         let row = $("<div>");
         let col = $("<div>");
@@ -26,6 +29,10 @@ $(document).ready(function () {
         row.append(col);
         $("#index").append(row);
     }
+
+    /**
+     * cardGenerator generates all of the elements in the contact info section of the homepage and fills them
+     */
     let cardGenerator = function () {
         let card = $("<div>");
         let body = $("<div>");
@@ -70,6 +77,9 @@ $(document).ready(function () {
         $("#index").append(card)
     }
 
+    /**
+     * main calls the generator functions
+     */
     let main = function () {
         mainGenerator();
         cardGenerator();

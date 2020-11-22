@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    /**
+     * travelItem creates the elements of the first portfolio item and appends them to the page
+     */
     let travelItem = function () {
         let card = $("<div>");
         let row = $("<div>");
@@ -44,6 +47,9 @@ $(document).ready(function () {
         $("#main").append(card);
     }
 
+    /**
+     * quizItem creates the elements of the second portfolio item and appends them to the page
+     */
     let quizItem = function () {
         let card = $("<div>");
         let row = $("<div>");
@@ -108,6 +114,9 @@ $(document).ready(function () {
         $("#main").append(card);
     }
 
+    /**
+     * weatherItem creates the elements of the third portfolio item and appends them to the page
+     */
     let weatherItem = function () {
         let card = $("<div>");
         let row = $("<div>");
@@ -153,7 +162,15 @@ $(document).ready(function () {
         $("#main").append(card);
     }
 
-    travelItem();
-    quizItem();
-    weatherItem();
+    /**
+     * main calls the generators
+     */
+    let main = function () {
+        travelItem();
+        quizItem();
+        weatherItem();
+    }
+
+    main();
+
 })
