@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    let weatherItem = function () {
+    let travelItem = function () {
         let card = $("<div>");
         let row = $("<div>");
         let imgDiv = $("<div>");
         let img = $("<img>");
-        let textDiv = $("<dic>");
+        let textDiv = $("<div>");
         let body = $("<div>");
         let title = $("<h4>");
         let text = $("<p>");
@@ -48,7 +48,7 @@ $(document).ready(function () {
         let card = $("<div>");
         let row = $("<div>");
         let imgDiv = $("<div>");
-        let textDiv = $("<dic>");
+        let textDiv = $("<div>");
         let body = $("<div>");
         let title = $("<h4>");
         let text = $("<p>");
@@ -60,10 +60,10 @@ $(document).ready(function () {
         row.attr("class", "row no-gutters");
         imgDiv.attr("class", "col-md-6");
         imgDiv.html(`
-        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div id="carousel" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselExampleControls" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleControls" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -73,11 +73,11 @@ $(document).ready(function () {
                     <img src="./assets/images/Quiz_Highscore.gif" class="d-block w-100" alt="Quiz_Highscore.gif">
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="sr-only">Previous</span>
             </a>
-            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Next</span>
             </a>
@@ -107,6 +107,53 @@ $(document).ready(function () {
         card.append(row);
         $("#main").append(card);
     }
-    weatherItem();
+
+    let weatherItem = function () {
+        let card = $("<div>");
+        let row = $("<div>");
+        let imgDiv = $("<div>");
+        let img = $("<img>");
+        let textDiv = $("<div>");
+        let body = $("<div>");
+        let title = $("<h4>");
+        let text = $("<p>");
+        let link = $("<a>");
+        let link2 = $("<a>");
+
+        card.attr("class", "card mb-3");
+        card.attr("style", "max-width: 1000px; margin-top: 25px;");
+        row.attr("class", "row no-gutters");
+        imgDiv.attr("class", "col-md-6");
+        img.attr("src", "./assets/images/Weather_App.png");
+        img.attr("class", "card-img");
+        img.attr("alt", "Weather_App.png");
+        textDiv.attr("class", "col-md-6");
+        body.attr("class", "card-body");
+        title.attr("class", "card-title");
+        title.text("Project: Weather Dashboard");
+        text.attr("class", "card-text");
+        text.attr("style", "font-size: large");
+        text.text("This app features a search bar with interactive history elements that can be used to re run a previous query, on mouseover these elements are highlighted. Exhibiting the weather data is a banner/panel that shows today's weather. This app also includes a simplified five day forecast, with date, weather icon, temperature, and humidity.");
+        link.attr("class", "card-link");
+        link.attr("href", "https://github.com/jtwob/Weather_App");
+        link.text("GitHub Repo");
+        link2.attr("class", "card-link");
+        link2.attr("href", "https://jtwob.github.io/Weather_App/");
+        link2.text("Live Deployed App");
+
+        body.append(title);
+        body.append(text);
+        body.append(link);
+        body.append(link2);
+        textDiv.append(body);
+        imgDiv.append(img);
+        row.append(imgDiv);
+        row.append(textDiv);
+        card.append(row);
+        $("#main").append(card);
+    }
+
+    travelItem();
     quizItem();
+    weatherItem();
 })

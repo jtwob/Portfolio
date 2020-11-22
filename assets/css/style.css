@@ -1,5 +1,14 @@
+body{
+    background-image: url("../images/double-bubble.png");
+}
+
 .wrap-text{
     float: left;
+    margin: 10px;
+}
+
+.wrap-text-r{
+    float: right;
     margin: 10px;
 }
 
