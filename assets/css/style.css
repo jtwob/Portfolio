@@ -1,18 +1,16 @@
+/* Background styling */
 body{
     background-image: url("../images/double-bubble.png");
 }
 
+/* For the picture on the homepage */
 .wrap-text{
     float: left;
     margin: 10px;
 }
 
-.wrap-text-r{
-    float: right;
-    margin: 10px;
-}
-
+/* To darken the controls on the carousel */
 .carousel-control-next,
-.carousel-control-prev /*, .carousel-indicators */ {
+.carousel-control-prev , .carousel-indicators {
     filter: invert(100%);
 }
