@@ -201,8 +201,8 @@ $(document).ready(function () {
         body.append(link2);
         textDiv.append(body);
         imgDiv.append(img);
-        row.append(imgDiv);
         row.append(textDiv);
+        row.append(imgDiv);
         card.append(row);
         $("#main").append(card);
     }
