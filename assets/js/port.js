@@ -162,6 +162,51 @@ $(document).ready(function () {
         $("#main").append(card);
     }
 
+    let burgerItem = function () {
+        let card = $("<div>");
+        let row = $("<div>");
+        let imgDiv = $("<div>");
+        let img = $("<img>");
+        let textDiv = $("<div>");
+        let body = $("<div>");
+        let title = $("<h4>");
+        let text = $("<p>");
+        let link = $("<a>");
+        let link2 = $("<a>");
+
+        card.attr("class", "card mb-3");
+        card.attr("style", "max-width: 1000px; margin-top: 25px;");
+        row.attr("class", "row no-gutters");
+        imgDiv.attr("class", "col-md-6");
+        img.attr("src", "./assets/images/burger-app.png");
+        img.attr("class", "card-img");
+        img.attr("alt", "burger-app.png");
+        textDiv.attr("class", "col-md-6");
+        body.attr("class", "card-body");
+        title.attr("class", "card-title");
+        title.text("Project: Eat DA Burger");
+        text.attr("class", "card-text");
+        text.attr("style", "font-size: large");
+        text.text("This is a full-stack application that uses MySQL, Node, Express, Handlebars and a homemade ORM. It allows users to add a new burger to a database, and to devour the burger, rendering it disabled. Not much to the functionality portion but it's got a lot going on behing the scenes!");
+        link.attr("class", "card-link");
+        link.attr("href", "https://github.com/jtwob/burger");
+        link.text("GitHub Repo");
+        link2.attr("class", "card-link");
+        link2.attr("href", "https://eat-da-burger-jtwob.herokuapp.com/");
+        link2.text("Live Deployed App");
+
+        body.append(title);
+        body.append(text);
+        body.append(link);
+        body.append(link2);
+        textDiv.append(body);
+        imgDiv.append(img);
+        row.append(imgDiv);
+        row.append(textDiv);
+        card.append(row);
+        $("#main").append(card);
+    }
+
     /**
      * main calls the generators
      */
@@ -169,6 +214,7 @@ $(document).ready(function () {
         travelItem();
         quizItem();
         weatherItem();
+        burgerItem();
     }
 
     main();
