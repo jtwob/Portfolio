@@ -145,7 +145,7 @@ $(document).ready(function () {
     text.attr("class", "card-text");
     text.attr("style", "font-size: large");
     text.text(
-      "The main script focuses on dynamically building the HTML for the quiz, adding and removing elements as necessary, while the secondary js file handles the highscores. Using a combination of bootstrap and css for visuals, and jquery for easy HTML creation and alteration, this is my largest JS project to date. I am glad it all came together."
+      "The main script focuses on dynamically building the HTML for the quiz, adding and removing elements as necessary, while the secondary js file handles the highscores. Using a combination of bootstrap and css for visuals, and jquery for easy HTML creation and alteration. I am glad it all came together."
     );
     link.attr("class", "card-link");
     link.attr("href", "https://github.com/jtwob/Coding_Quiz");
