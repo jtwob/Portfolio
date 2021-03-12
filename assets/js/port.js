@@ -46,6 +46,53 @@ $(document).ready(function () {
     $("#main").append(card);
   };
 
+  let googleBooksItem = function () {
+    let card = $("<div>");
+    let row = $("<div>");
+    let imgDiv = $("<div>");
+    let img = $("<img>");
+    let textDiv = $("<div>");
+    let body = $("<div>");
+    let title = $("<h4>");
+    let text = $("<p>");
+    let link = $("<a>");
+    let link2 = $("<a>");
+
+    card.attr("class", "card mb-3");
+    card.attr("style", "max-width: 1000px; margin-top: 25px;");
+    row.attr("class", "row no-gutters");
+    imgDiv.attr("class", "col-md-6");
+    img.attr("src", "./assets/images/ReactSearch.png");
+    img.attr("class", "card-img");
+    img.attr("alt", "GoogleBooksSearch.png");
+    textDiv.attr("class", "col-md-6");
+    body.attr("class", "card-body");
+    title.attr("class", "card-title");
+    title.text("Project: Google Books Search");
+    text.attr("class", "card-text");
+    text.attr("style", "font-size: large");
+    text.text(
+      "This app uses the google books api to find books and if desired, save them. It also allows users to view the google play page linked to the book. MongoDB is used to store saved books, Express is used for the backend server and routes, React is used for the frontend pages and interface, and numerous node libraries and scripts are used. This is a full MERN stack application."
+    );
+    link.attr("class", "card-link");
+    link.attr("href", "https://github.com/jtwob/google-books-search");
+    link.text("GitHub Repo");
+    link2.attr("class", "card-link");
+    link2.attr("href", "https://google-books-jtwob.herokuapp.com/");
+    link2.text("Live Deployed App");
+
+    body.append(title);
+    body.append(text);
+    body.append(link);
+    body.append(link2);
+    imgDiv.append(img);
+    textDiv.append(body);
+    row.append(textDiv);
+    row.append(imgDiv);
+    card.append(row);
+    $("#main").append(card);
+  };
+
   /**
    * travelItem creates the elements of the first portfolio item and appends them to the page
    */
@@ -267,10 +314,11 @@ $(document).ready(function () {
    */
   let main = function () {
     uConnectItem();
-    travelItem();
+    googleBooksItem();
     quizItem();
-    weatherItem();
+    travelItem();
     burgerItem();
+    weatherItem();
   };
 
   main();
