@@ -87,8 +87,8 @@ $(document).ready(function () {
     body.append(link2);
     imgDiv.append(img);
     textDiv.append(body);
-    row.append(textDiv);
     row.append(imgDiv);
+    row.append(textDiv);
     card.append(row);
     $("#main").append(card);
   };
